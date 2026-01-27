@@ -33,5 +33,8 @@ if (function_exists('register_block_style')) {
     // QUERY
     register_block_style('core/query', ['name'  => 'nm-grid','label' => 'NM — Grille']);
 
+    // NAVIGATION
+    register_block_style('core/navigation', ['name'  => 'nm-header-nav','label' => 'NM — Navigation header']);
+
   });
 }
