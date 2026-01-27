@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "name": "Crème", "slug": "creme", "color": "#FFFBF2" },
+        { "name": "Blanc", "slug": "blanc", "color": "#FEFDFD" },
+        { "name": "Charbon", "slug": "charbon", "color": "#231F20" },
+        { "name": "Vert", "slug": "vert", "color": "#039446" },
+        { "name": "Jaune", "slug": "jaune", "color": "#FDEF00" },
+        { "name": "Corail", "slug": "corail", "color": "#F3611D" },
+        { "name": "Rouge", "slug": "rouge", "color": "#EE2223" }        
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "name": "Inter",
+          "slug": "inter",
+          "fontFamily": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+        },
+        {
+          "name": "EB Garamond",
+          "slug": "eb-garamond",
+          "fontFamily": "\"EB Garamond\", Georgia, \"Times New Roman\", serif"
+        }
+      ]
+    },
+    "custom": {
+      "boxShadow": "0px 0px 50px 0px rgba(0, 0, 0, 0.10)"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--creme)",
+      "text": "var(--wp--preset--color--charbon)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inter)",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--eb-garamond)"
+        }
+      },
+      "link": {
+        "color": { "text": "var(--wp--preset--color--vert)" }
+      }
+    }
+  }
+}
