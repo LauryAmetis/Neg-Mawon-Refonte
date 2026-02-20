@@ -11,14 +11,14 @@ if (function_exists('register_block_style')) {
     register_block_style('core/cover', ['name'  => 'nm-banner-musee','label' => 'NM — Bannière musée']);
 
     // GROUP (sections / cards / layout wrappers)
-    register_block_style('core/group', ['name'  => 'nm-section','label' => 'NM — Section']);
     register_block_style('core/group', ['name'  => 'nm-section-creme','label' => 'NM — Section crème']);
-    register_block_style('core/group', ['name'  => 'nm-card','label' => 'NM — Carte']);
     register_block_style('core/group', ['name'  => 'nm-ruban','label' => 'NM — Ruban']);
     register_block_style('core/group', ['name'  => 'nm-event','label' => 'NM — Evénement']);
     register_block_style('core/group', ['name'  => 'nm-a-la-une','label' => 'NM — A la une']);
     register_block_style('core/group', ['name'  => 'nm-brand','label' => 'NM — Brand']);
-    
+    register_block_style('core/group', ['name'  => 'nm-regard-sur-nos-actions','label' => 'NM — Regard sur nos actions']);
+    register_block_style('core/group', ['name'  => 'nm-timeline__item','label' => 'NM — Timeline item']);
+    register_block_style('core/group', ['name'  => 'nm-timeline__year','label' => 'NM — Timeline year']);
 
     // COLUMN 
     register_block_style('core/column', ['name'  => 'nm-event-date','label' => 'NM — Date événement']);
