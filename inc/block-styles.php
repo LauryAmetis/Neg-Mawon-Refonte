@@ -23,6 +23,7 @@ if (function_exists('register_block_style')) {
     // COLUMN 
     register_block_style('core/column', ['name'  => 'nm-event-date','label' => 'NM — Date événement']);
     register_block_style('core/column', ['name'  => 'nm-event-body','label' => 'NM — Corps événement']);
+    register_block_style('core/column', ['name'  => 'nm-fade','label' => 'NM — Dégradé']);
 
     // BUTTON
     register_block_style('core/button', ['name'  => 'nm-btn-outline','label' => 'NM — Bouton contour']);

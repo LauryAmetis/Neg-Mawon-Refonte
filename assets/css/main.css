@@ -226,21 +226,6 @@ footer {
 
     .wp-block-column > .wp-block-group {
       padding-left: var(--wp--style--root--padding-left);
-
-      &:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        left: 100%;
-        width: 100px;
-        height: 100%;
-        background: linear-gradient(
-          270deg,
-          rgba(255, 251, 242, 0) 0%,
-          rgba(255, 251, 242, 0.51) 50%,
-          rgba(255, 251, 242, 1) 100%
-        );
-      }
     }
   }
 }
@@ -307,4 +292,22 @@ footer {
 /* QUERY — grille*/
 .wp-block-query.is-style-nm-grid .wp-block-post-template {
   gap: 22px;
+}
+
+/* COLUMN - Dégradé */
+.wp-block-column.is-style-nm-fade {
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 100%;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(
+      270deg,
+      rgba(255, 251, 242, 0) 0%,
+      rgba(255, 251, 242, 0.51) 50%,
+      rgba(255, 251, 242, 1) 100%
+    );
+  }
 }
