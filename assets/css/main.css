@@ -313,10 +313,15 @@ footer {
 
 /* COLUMN - Show more */
 .wp-block-column.is-style-nm-show-more {
-  transition: all 0.5s ease-in-out;
   .wp-block-group.is-style-nm-show-more__item p {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.5s ease,
+      opacity 0.4s ease;
   }
+
   .wp-block-group.is-style-nm-show-more__item::before {
     content: "...";
     display: inline-block;
@@ -324,16 +329,19 @@ footer {
     color: var(--wp--preset--color--corail);
     border: 1px solid rgba(35, 31, 32, 0.22);
     border-radius: 10px;
+    position: absolute;
     left: 50%;
     top: 100%;
     transform: translate(-50%, -50%);
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.3s ease;
   }
 
   &:hover .wp-block-group.is-style-nm-show-more__item p {
-    display: block;
+    max-height: 500px;
+    opacity: 1;
   }
+
   &:hover .wp-block-group.is-style-nm-show-more__item::before {
-    content: none;
+    opacity: 0;
   }
 }
