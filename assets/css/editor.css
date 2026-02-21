@@ -111,6 +111,12 @@ footer {
   border: 1px solid rgba(35, 31, 32, 0.12);
   overflow: hidden;
   min-height: fit-content;
+
+  @media (max-width: 782px) {
+    .wp-block-column:first-child {
+      display: none;
+    }
+  }
 }
 
 .wp-block-cover__inner-container {
@@ -293,6 +299,10 @@ footer {
     rgba(255, 251, 242, 0.51) 50%,
     rgba(255, 251, 242, 1) 100%
   );
+
+  @media (max-width: 782px) {
+    content: none;
+  }
 }
 
 /* COLUMN - Dégradé D-G */
@@ -309,6 +319,10 @@ footer {
     rgba(255, 251, 242, 0.51) 50%,
     rgba(255, 251, 242, 1) 100%
   );
+
+  @media (max-width: 782px) {
+    content: none;
+  }
 }
 
 /* COLUMN - Show more */
