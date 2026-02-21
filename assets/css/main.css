@@ -40,29 +40,33 @@ header {
       mark:last-child {
         font-size: 25px;
       }
-    }
-  }
 
-  .wp-block-navigation.is-style-nm-header-nav {
-    a {
-      position: relative;
-      display: inline-block;
-      text-decoration: none;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0px;
-        background-color: var(--wp--preset--color--corail);
-        opacity: 0.5;
-        display: block;
-        height: 0.1rem;
-        transition: width 0.5s;
-        width: 0;
+      @media (max-width: 960px) {
+        display: none;
       }
+    }
 
-      &:hover::after {
-        width: 100%;
+    .wp-block-navigation.is-style-nm-header-nav {
+      a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0px;
+          background-color: var(--wp--preset--color--corail);
+          opacity: 0.5;
+          display: block;
+          height: 0.1rem;
+          transition: width 0.5s;
+          width: 0;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }
