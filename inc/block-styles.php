@@ -26,6 +26,7 @@ if (function_exists('register_block_style')) {
     register_block_style('core/column', ['name'  => 'nm-event-body','label' => 'NM — Corps événement']);
     register_block_style('core/column', ['name'  => 'nm-fade-l-r','label' => 'NM — Dégradé G-D']);
     register_block_style('core/column', ['name'  => 'nm-fade-r-l','label' => 'NM — Dégradé D-G']);
+    register_block_style('core/column', ['name'  => 'nm-fade-l-r-green','label' => 'NM — Dégradé G-D vert']);
     register_block_style('core/column', ['name'  => 'nm-show-more','label' => 'NM — Show more']);
     
     // BUTTON
