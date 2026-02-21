@@ -218,6 +218,10 @@ footer {
 
   .wp-block-columns {
     min-width: 100%;
+    gap: unset !important;
+    @media (max-width: 782px) {
+      flex-direction: column-reverse;
+    }
 
     .wp-block-column > .wp-block-group {
       padding-left: var(--wp--style--root--padding-left);
