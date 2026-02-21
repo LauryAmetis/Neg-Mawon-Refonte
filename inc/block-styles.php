@@ -19,12 +19,15 @@ if (function_exists('register_block_style')) {
     register_block_style('core/group', ['name'  => 'nm-regard-sur-nos-actions','label' => 'NM — Regard sur nos actions']);
     register_block_style('core/group', ['name'  => 'nm-timeline__item','label' => 'NM — Timeline item']);
     register_block_style('core/group', ['name'  => 'nm-timeline__year','label' => 'NM — Timeline year']);
+    register_block_style('core/group', ['name'  => 'nm-show-more__item','label' => 'NM — Show more Item']);
 
     // COLUMN 
     register_block_style('core/column', ['name'  => 'nm-event-date','label' => 'NM — Date événement']);
     register_block_style('core/column', ['name'  => 'nm-event-body','label' => 'NM — Corps événement']);
-    register_block_style('core/column', ['name'  => 'nm-fade','label' => 'NM — Dégradé']);
-
+    register_block_style('core/column', ['name'  => 'nm-fade-l-r','label' => 'NM — Dégradé G-D']);
+    register_block_style('core/column', ['name'  => 'nm-fade-r-l','label' => 'NM — Dégradé D-G']);
+    register_block_style('core/column', ['name'  => 'nm-show-more','label' => 'NM — Show more']);
+    
     // BUTTON
     register_block_style('core/button', ['name'  => 'nm-btn-outline','label' => 'NM — Bouton contour']);
 
