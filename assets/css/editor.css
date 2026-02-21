@@ -280,7 +280,7 @@ footer {
 }
 
 /* COLUMN - Dégradé G-D */
-.wp-block-column.is-style-nm-fade::before {
+.wp-block-column.is-style-nm-fade-l-r::before {
   content: "";
   position: absolute;
   inset: 0;
