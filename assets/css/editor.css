@@ -1,8 +1,22 @@
-:root { --nm-radius: 18px; }
+:root {
+  --nm-radius: 18px;
+}
 
-.wp-block-button__link { border-radius: 14px; }
+.wp-block-button__link {
+  border-radius: 14px;
+}
 
-a { text-underline-offset: 0.18em; }
+a {
+  text-underline-offset: 0.18em;
+}
+
+/* =========================
+   NEG’ MAWON — Layout Styles
+   ========================= */
+
+/* HEADER & FOOTER */
+
+/* Header fixe */
 
 header {
   position: fixed;
@@ -10,34 +24,68 @@ header {
   z-index: 5;
   background-color: var(--wp--preset--color--creme);
   width: 100%;
-  height: fit-content; 
+  height: fit-content;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
   a {
     text-decoration: none;
   }
+
   .wp-block-group.is-style-nm-brand {
     gap: unset !important;
 
     .wp-block-group:last-child p {
       font-weight: 900;
+
       mark:last-child {
         font-size: 25px;
       }
     }
   }
+
+  .wp-block-navigation.is-style-nm-header-nav {
+    a {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        background-color: var(--wp--preset--color--corail);
+        opacity: 0.5;
+        display: block;
+        height: 0.1rem;
+        transition: width 0.5s;
+        width: 0;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
 }
+
+/* Footer ajuste espacement */
 
 footer {
   margin-block-start: unset !important;
+
   .wp-block-cover {
     min-height: fit-content;
+
     .wp-block-cover__inner-container > .wp-block-group {
       min-width: 100%;
+
       .wp-block-columns .wp-block-column:not(:last-child) {
-        border-right: 1px solid rgba(255, 251, 242, .25);
+        border-right: 1px solid rgba(255, 251, 242, 0.25);
       }
+
       .wp-block-columns .wp-block-column:first-child p:first-child {
         font-weight: 900;
+
         mark:last-child {
           font-size: 25px;
         }
@@ -50,6 +98,10 @@ footer {
   margin-block-start: 0 !important;
 }
 
+:where(.wp-site-blocks) > :nth-child(2) {
+  margin-block-start: 100px !important;
+}
+
 /* =========================
    NEG’ MAWON — Block Styles
    ========================= */
@@ -59,16 +111,6 @@ footer {
   border: 1px solid rgba(35, 31, 32, 0.12);
   overflow: hidden;
   min-height: fit-content;
-
-  .wp-block-group:first-child:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 251, 242, 0) 0%, rgba(255, 251, 242, 0.51) 50%, rgba(255, 251, 242, 1) 100%);
-    left: -100px;
-  }
 }
 
 .wp-block-cover__inner-container {
@@ -76,7 +118,8 @@ footer {
   height: 100%;
 }
 
-.wp-block-cover.is-style-nm-hero-musee > .wp-block-cover__inner-container.has-global-padding {
+.wp-block-cover.is-style-nm-hero-musee
+  > .wp-block-cover__inner-container.has-global-padding {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -89,12 +132,15 @@ footer {
     .wp-block-group:first-child {
       min-width: 100%;
     }
+
     .wp-block-columns {
       min-width: 100%;
+
       .wp-block-group.is-style-nm-event .wp-block-columns {
-        gap:unset !important;        
+        gap: unset !important;
       }
     }
+
     .wp-block-group.is-style-nm-event {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
@@ -102,10 +148,12 @@ footer {
 
   .wp-block-column.is-style-nm-event-date {
     flex-basis: 20%;
+
     p {
       position: relative;
       top: -20px;
     }
+
     mark:first-child {
       font-size: 55px;
     }
@@ -117,17 +165,11 @@ footer {
 
   .wp-block-column.is-style-nm-event-body {
     flex-basis: 80%;
+
     .wp-block-group p {
       margin-block-start: unset !important;
-
     }
   }
-}
-
-/* GROUP — Section */
-.wp-block-group.is-style-nm-section {
-  padding-top: 64px;
-  padding-bottom: 64px;
 }
 
 /* GROUP — Section crème */
@@ -137,51 +179,94 @@ footer {
   background: var(--wp--preset--color--creme);
 }
 
-/* GROUP — Carte */
-.wp-block-group.is-style-nm-card {
-  border: 1px solid rgba(35, 31, 32, 0.12);
-  background: var(--wp--preset--color--blanc);
-  border-radius: 18px;
-  padding: 24px;
-}
-
 /* GROUP — Ruban */
 .wp-block-group.is-style-nm-ruban {
   margin-block-end: -4rem;
   margin-top: 4rem;
   padding: 14px 18px;
-  border-top: 1px solid rgba(35,31,32,.18);
-  background: rgba(255,251,242,.65);      /* léger voile crème */
+  border-top: 1px solid rgba(35, 31, 32, 0.18);
+  background: rgba(255, 251, 242, 0.65);
+  /* léger voile crème */
   backdrop-filter: blur(2px);
+
+  p::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 44%;
+    left: 1%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--wp--preset--color--charbon);
+    transform: rotate(45deg);
+  }
 }
 
 /* GROUP - A la une */
 .wp-block-group.is-style-nm-a-la-une {
   overflow: hidden;
-    .wp-block-columns {
-      min-width: 100%;
-      .wp-block-column > .wp-block-group {
-        padding-left: var(--wp--style--root--padding-left);  
-        
-      &:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        left: 100%;
-        width: 100px;
-        height: 100%;
-        background: linear-gradient(270deg, rgba(255, 251, 242, 0) 0%, rgba(255, 251, 242, 0.51) 50%, rgba(255, 251, 242, 1) 100%);
-      }
+
+  .wp-block-columns {
+    min-width: 100%;
+
+    .wp-block-column > .wp-block-group {
+      padding-left: var(--wp--style--root--padding-left);
+    }
+  }
+}
+
+/* GROUP - Regard sur nos actions */
+.wp-block-group.is-style-nm-regard-sur-nos-actions {
+  .wp-block-group,
+  .wp-block-columns {
+    min-width: 100%;
+    max-width: var(--wp--style--global--wide-size);
+  }
+
+  .wp-block-group.is-style-nm-timeline__item {
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+
+    .wp-block-group.is-style-nm-timeline__year {
+      font-size: 32px;
     }
   }
 }
 
 /* BUTTON — contour */
-.wp-block-button.is-style-nm-btn-outline .wp-block-button__link {
+.wp-block-button.is-style-nm-btn-outline {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    flex-grow: 0.8;
+  }
+
+  .wp-block-button__link {
+    background: transparent;
+    color: var(--wp--preset--color--charbon);
+    border: 1px solid rgba(35, 31, 32, 0.22);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background: var(--wp--preset--color--corail);
+      border-radius: 10px;
+      color: var(--wp--preset--color--creme);
+    }
+  }
+}
+
+.wp-block-button__link {
   background: transparent;
   color: var(--wp--preset--color--charbon);
   border: 1px solid rgba(35, 31, 32, 0.22);
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--wp--preset--color--corail);
+    border-radius: 10px;
+    color: var(--wp--preset--color--creme);
+  }
 }
 
 /* IMAGE — arrondie */
@@ -192,4 +277,63 @@ footer {
 /* QUERY — grille*/
 .wp-block-query.is-style-nm-grid .wp-block-post-template {
   gap: 22px;
+}
+
+/* COLUMN - Dégradé G-D */
+.wp-block-column.is-style-nm-fade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 251, 242, 0) 0%,
+    rgba(255, 251, 242, 0.51) 50%,
+    rgba(255, 251, 242, 1) 100%
+  );
+}
+
+/* COLUMN - Dégradé D-G */
+.wp-block-column.is-style-nm-fade-r-l::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: calc(50% - 100px);
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 251, 242, 0) 0%,
+    rgba(255, 251, 242, 0.51) 50%,
+    rgba(255, 251, 242, 1) 100%
+  );
+}
+
+/* COLUMN - Show more */
+.wp-block-column.is-style-nm-show-more {
+  transition: all 0.5s ease-in-out;
+  .wp-block-group.is-style-nm-show-more__item p {
+    display: none;
+  }
+  .wp-block-group.is-style-nm-show-more__item::before {
+    content: "...";
+    display: inline-block;
+    padding: 2px 10px;
+    color: var(--wp--preset--color--corail);
+    border: 1px solid rgba(35, 31, 32, 0.22);
+    border-radius: 10px;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover .wp-block-group.is-style-nm-show-more__item p {
+    display: block;
+  }
+  &:hover .wp-block-group.is-style-nm-show-more__item::before {
+    content: none;
+  }
 }
